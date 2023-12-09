@@ -194,7 +194,43 @@
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js" integrity="sha512-0QbL0ph8Tc8g5bLhfVzSqxe9GERORsKhIn1IrpxDAgUsbBGz/V7iSav2zzW325XGd1OMLdL4UiqRJj702IeqnQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="js/classie.js"></script>
-    <script src="js/cbpAnimatedHeader.js"></script>
+    <!-- <script src="js/cbpAnimatedHeader.js"></script> -->
+<script>
+    var cbpAnimatedHeader = (function() {
+
+        var docElem = document.documentElement,
+            header = document.querySelector( '.navbar-default' ),
+            didScroll = false,
+            changeHeaderOn = 40; // Origional 300
+    
+        function init() {
+            window.addEventListener( 'scroll', function( event ) {
+                if( !didScroll ) {
+                    didScroll = true;
+                    setTimeout( scrollPage, 250 ); // Origional scrollPage, 250
+                }
+            }, false );
+        }
+    
+        function scrollPage() {
+            var sy = scrollY();
+            if ( sy >= changeHeaderOn ) {
+                classie.add( header, 'navbar-shrink' );
+            }
+            else {
+                classie.remove( header, 'navbar-shrink' );
+            }
+            didScroll = false;
+        }
+    
+        function scrollY() {
+            return window.pageYOffset || docElem.scrollTop;
+        }
+    
+        init();
+    
+    })();
+</script>
 
     <!-- Contact Form JavaScript -->
     <script src="js/jqBootstrapValidation.js"></script>

@@ -265,8 +265,8 @@ header {
     text-align: center;
     color: #fff;
     background-attachment: scroll;
-    background-image: url(../img/header-bg2.jpg);
-    background-color: rgba(0, 0, 0, 0.4); /* This sets the background color with 50% opacity */
+    /* background-image: url(../img/header-bg3.heic); */
+    /* background-color: rgba(0, 0, 0, 0.4); This sets the background color with 50% opacity */
     background-blend-mode: multiply; /* Helps blend the background color with the image */
     background-position: center center;
     background-repeat: none;
