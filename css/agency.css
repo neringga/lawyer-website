@@ -889,6 +889,10 @@ header {
   
   /* Media query for smaller screens */
   @media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 1em;
+    }
+
     header .intro-text {
       padding: 30px 10px;
     }
