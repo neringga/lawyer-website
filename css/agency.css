@@ -855,8 +855,9 @@ header {
     text-align: center;
     color: #fff;
     background-attachment: scroll;
-    background-image: url(../img/header-bg2.jpg);
-    background-color: rgba(0, 0, 0, 0.4);
+    /* background-image: url(../img/header-bg2.jpg); */
+    background-image: url(../img/header.jpg);
+    background-color: rgba(0, 0, 0, 0.6);
     background-blend-mode: multiply;
     background-position: center center;
     background-repeat: no-repeat;
